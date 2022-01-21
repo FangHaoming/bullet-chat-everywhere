@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+  "name": "bullet-chat-everywhere",
+  "version": "1.0.0.2",
+  "description": "my project for the ByteDance youthcamp out of interest",
+  "icons": {},
+  "browser_action": {
+    "default_icon": {},
+    "default_title": "处处弹幕",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.baidu.com/"
+      ],
+      "css": [
+        "css/mystyles.css"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/myscript.js"
+      ]
+    }
+  ],
+  "options_page": "options.html",
+  "permissions": [
+    "*://*.wikipedia.org/*"
+  ],
+  "web_accessible_resources": [
+    "images/*.png"
+  ]
+}
